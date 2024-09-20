@@ -1,0 +1,435 @@
+/* General body and text styles */
+body {
+  background-color: #f4e1d2; /* Warm sandy tone */
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #b34700; /* Deep Moroccan orange */
+}
+
+/* Button styles */
+.button {
+  background-color: #c14400; /* Warm terracotta */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #a03600; /* Darker terracotta */
+}
+
+/* Marketplace container */
+.marketplace {
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto; /* Centers the content */
+  background-color: #f4e1d2; /* Warm sandy color */
+}
+
+/* Grid for items */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adapt grid based on screen size */
+  gap: 20px; /* Space between grid items */
+  margin-top: 20px;
+  background-color: #f7f0e8;
+}
+
+/* Individual item cards */
+.item-card {
+  background-color: #fff5e1;
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make the items pop */
+}
+
+.item-card:hover {
+  transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+.item-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures image covers the container */
+  border-radius: 10px 10px 0 0;
+}
+
+.item-card h2 {
+  font-family: 'Merriweather', serif;
+  color: #b34700;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.item-card p {
+  font-family: 'Open Sans', sans-serif;
+  color: #8c4b1f;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 0 5px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #0056b3;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+/* Items per page select */
+.items-per-page {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.items-per-page label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.items-per-page select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Chatbox styles */
+.chatbox-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.chatbox {
+  width: 300px;
+  height: 400px;
+  background-color: #f4e1d2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+}
+
+.chatbox.open {
+  display: flex;
+}
+
+.chatbox-header {
+  background-color: #c14400;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbox-header .avatar {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Circular avatar */
+  margin-right: 10px;
+}
+
+.chatbox-body {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #fff5e1;
+}
+
+.chatbot-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatbot-message {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chatbot-message.user {
+  align-self: flex-end;
+  background-color: #c0fdfb;
+}
+
+.chatbot-message.bot {
+  align-self: flex-start;
+  background-color: #f3f4f6;
+}
+
+.chatbox-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbox-footer input {
+  flex-grow: 1;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.chatbox-footer button {
+  background-color: #c14400;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Chatbox toggle button */
+.chatbox-toggle {
+  background-color: #c14400;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chatbox-close {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; /* Full width to occupy available space */
+}
+
+.item-card {
+  cursor: pointer; /* Make cards clickable */
+}
+
+/* Chatbot Styles */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it stays on top */
+  width: 300px;
+  display: none; /* Initially hidden */
+}
+
+/* Adjust chatbox */
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+/* Chatbot header */
+.chatbox-header {
+  background-color: #c14400;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Chatbot avatar */
+.chatbox-header .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.loader {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.item-link {
+  color: blue; /* or your preferred color */
+  text-decoration: underline;
+}
+
+.item-link:hover {
+  text-decoration: none; /* Optional hover style */
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+/* Larger image view for individual item */
+.item-large-view img {
+  width: 100%; /* Full width of the container */
+  height: 400px; /* 2x the height of marketplace images */
+  object-fit: cover; /* Ensures image fills the space while keeping its aspect ratio */
+  border-radius: 10px;
+}
+
+/* Individual item cards (no changes needed here unless you want other adjustments) */
+.item-card img {
+  width: 100%;
+  height: 200px; /* Keep marketplace images at this height */
+  object-fit: cover; /* Ensures image fills the container without distortion */
+  border-radius: 10px 10px 0 0;
+}
+
+keep all this logic
+
+/* General body and text styles */
+body {
+  background-color: #f4e1d2; /* Warm sandy tone */
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #b34700; /* Deep Moroccan orange */
+}
+
+/* Navigation margin adjustment */
+.item-large-view {
+  margin-top: 20px; /* Add margin between nav and image */
+}
+
+/* Background and spacing */
+.item-large-view {
+  background-color: #fff5e1; /* Light Moroccan beige */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.item-large-view img {
+  width: 100%; /* Full width of the container */
+  height: 400px; /* 2x the height of marketplace images */
+  object-fit: cover; /* Ensures image fills the space while keeping its aspect ratio */
+  border-radius: 10px;
+}
+
+/* Item Details Styling */
+.item-large-view h1 {
+  font-size: 2.5rem; /* Larger title for emphasis */
+  font-family: 'Merriweather', serif; /* Moroccan inspired font */
+  color: #b34700; /* Deep Moroccan orange */
+  margin-top: 20px;
+}
+
+.item-large-view p {
+  font-size: 1.1rem; 
+  color: #8c4b1f; /* Earthy brown for text */
+  line-height: 1.6; /* Better readability */
+}
+
+/* Button styles */
+.button {
+  background-color: #c14400; /* Warm terracotta */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Spacing between elements */
+}
+
+.button:hover {
+  background-color: #a03600; /* Darker terracotta */
+}
+
+/* Seller Information */
+.seller-info {
+  margin-top: 30px;
+  background-color: #fff5e1; /* Light Moroccan beige */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seller-info p {
+  font-size: 1.1rem; /* Consistent text size */
+  color: #8c4b1f;
+}
+
+/* Moroccan-inspired footer */
+.footer {
+  background-color: #b34700; /* Deep Moroccan orange */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+nav {
+  background: #333;
+  padding: 10px;
+  border-bottom: 3px solid #c14400; /* Moroccan terracotta accent */
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  background-color: #c14400; /* Warm terracotta */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Merriweather', serif; /* Moroccan-inspired font */
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #a03600; /* Darker terracotta */
+}
